@@ -10,5 +10,5 @@ int fibbonaci(int n){
 }
 
 int main(){
-	cout<<fibbonaci(10)<<endl;
+	cout<<fibbonaci(25)<<endl;
 }
