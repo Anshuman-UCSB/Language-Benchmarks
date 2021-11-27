@@ -1,3 +1,4 @@
+// java leibniz
 class leibniz{
 	public static void main(String args[]){
 		int d = 1;

@@ -1,3 +1,5 @@
+// java factorial
+
 class factorial{
 	public static void main(String args[]){
 		int s = 1;
