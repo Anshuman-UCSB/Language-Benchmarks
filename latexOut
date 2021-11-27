@@ -1,0 +1,251 @@
+\textbf{Julia/fibonacci.jl}
+\begin{verbatim}
+# julia fibonacci.jl
+function fibonacci(n::Int)
+	n <= 1 && return n
+	fibonacci(n-1) + fibonacci(n-2)
+end
+
+25|>fibonacci|>println\end{verbatim}
+\textbf{Julia/factorial.jl}
+\begin{verbatim}
+#julia factorial.jl
+s = 1
+for i in 1:12
+	global s *= i
+end
+println(s)\end{verbatim}
+\textbf{Julia/leibniz.jl}
+\begin{verbatim}
+# julia liebniz.jl
+
+k = 1
+s = 0
+for i in 0:99999
+	global k, s
+	if i%2 == 0
+		s += 4/k
+	else
+		s -= 4/k
+	end
+	k+=2
+end
+
+println(s)\end{verbatim}
+\textbf{Ruby/factorial.ru}
+\begin{verbatim}
+# ruby factorial.ru
+p (2..12).reduce(:*)\end{verbatim}
+\textbf{Ruby/fibonacci.ru}
+\begin{verbatim}
+# ruby fibonacci.ru
+def fibonacci(n)
+	return n if (0..1).include? n
+	( fibonacci(n-1) + fibonacci(n-2))
+end
+p fibonacci(25)\end{verbatim}
+\textbf{Ruby/leibniz.ru}
+\begin{verbatim}
+# ruby leibniz.ru
+s, k = 0.0, 1
+for i in 0..99999 do
+	if i%2 == 0
+		s += 4.to_f/k
+	else
+		s -= 4.to_f/k
+	end
+	k+=2
+end
+p s\end{verbatim}
+\textbf{R/factorial.r}
+\begin{verbatim}
+# Rscript factorial.r
+s = 1
+for(i in 1:12){
+	s = s*i
+}
+print(s)\end{verbatim}
+\textbf{R/leibniz.r}
+\begin{verbatim}
+# Rscript leibniz.r
+
+k = 1
+s = 0
+for(i in 0:99999) {
+	if (i%%2 == 0){
+		s = s+ 4/k
+	}else{
+		s = s- 4/k
+	}
+	k=k+2
+}
+print(s)\end{verbatim}
+\textbf{R/fibonacci.r}
+\begin{verbatim}
+# Rscript fibonacci.r
+fibonacci <- function(n){
+	if(n<=1){
+		return (n)
+	}
+	return( fibonacci(n-1) + fibonacci(n-2))
+}
+
+print(fibonacci(25))\end{verbatim}
+\textbf{JavaScript/leibniz.js}
+\begin{verbatim}
+// node leibniz.js
+var k = 1;
+var s = 0;
+
+for(var i = 0;i<100000;i++){
+	if (i%2 == 0){
+		s += 4/k
+	}else
+		s -= 4/k
+	k += 2
+}
+
+console.log(s)\end{verbatim}
+\textbf{JavaScript/fibonacci.js}
+\begin{verbatim}
+// node fibonacci.js
+
+function fibonacci(num) {
+	if (num <= 1) return num; 
+	return fibonacci(num - 1) + fibonacci(num - 2);
+}
+
+console.log(fibonacci(25))\end{verbatim}
+\textbf{JavaScript/factorial.js}
+\begin{verbatim}
+// node factorial.js
+
+var s = 1;
+for(var i = 1;i<=12;i++){
+	s*=i;
+}
+console.log(s)\end{verbatim}
+\textbf{Java/factorial.java}
+\begin{verbatim}
+// java factorial
+
+class factorial{
+	public static void main(String args[]){
+		int s = 1;
+		for(int i = 1;i<=12;i++){
+			s*=i;
+		}
+		System.out.println(s);
+	}
+}\end{verbatim}
+\textbf{Java/fibonacci.java}
+\begin{verbatim}
+// java fibonacci
+class fibonacci{
+	static int fibonacci(int n){
+		if(n<=1){
+			return n;
+		}
+		return fibonacci(n-1) + fibonacci(n-2);
+	}
+
+	public static void main(String args[]){
+		System.out.println(fibonacci(25));
+	}
+}\end{verbatim}
+\textbf{Java/leibniz.java}
+\begin{verbatim}
+// java leibniz
+class leibniz{
+	public static void main(String args[]){
+		int d = 1;
+		double s = 0;
+		for(int i = 0;i<100000;i++){
+			if(i%2==0)
+				s += 4./d;
+			else
+				s -= 4./d;
+			d+=2;
+		}
+		System.out.println(s);
+	}
+}\end{verbatim}
+\textbf{C++/leibniz.cpp}
+\begin{verbatim}
+// ./leibniz
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	double s = 0;
+	int d = 1;
+	for(int i = 0;i<100000;i++){
+		if(i%2==0)
+			s += 4./d;
+		else
+			s -= 4./d;
+		d+=2;
+	}
+	cout<<s<<endl;
+}\end{verbatim}
+\textbf{C++/fibonacci.cpp}
+\begin{verbatim}
+// ./fibonacci
+#include <iostream>
+
+using namespace std;
+
+int fibbonaci(int n){
+	if(n <= 1){
+		return n;
+	}
+	return fibbonaci(n-1)+fibbonaci(n-2);
+}
+
+int main(){
+	cout<<fibbonaci(25)<<endl;
+}\end{verbatim}
+\textbf{C++/factorial.cpp}
+\begin{verbatim}
+// ./factorial
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int s = 1;
+	for(int i = 1;i<=12;i++){
+		s*=i;
+	}
+	cout<<s<<endl;
+}\end{verbatim}
+\textbf{Python/leibniz.py}
+\begin{verbatim}
+# python leibniz.py
+# pypy leibniz.py
+s, d = 0, 1
+for i in range(100000):
+	if i%2 == 0:
+		s += 4/d
+	else:
+		s -= 4/d
+	d += 2
+print(s)\end{verbatim}
+\textbf{Python/factorial.py}
+\begin{verbatim}
+# python factorial.py
+# pypy factorial.py
+s = 1
+for i in range(1,13):
+	s*=i
+print(s)\end{verbatim}
+\textbf{Python/fibonacci.py}
+\begin{verbatim}
+# python fibonacci.py
+# pypy fibonacci.py
+def fibonacci(n):
+	if n<=1: return n
+	return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(25))\end{verbatim}
